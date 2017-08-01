@@ -120,12 +120,6 @@ def wikipedia(bot, trigger):
         lang = args.group(1)
         query = args.group(2)
 
-    query = trigger.group(2)
-    args = re.search(r'^-([a-z]{2,12})\s(.*)', query)
-    if args is not None:
-        lang = args.group(1)
-        query = args.group(2)
-
     if not query:
         bot.reply('What do you want me to look up?')
         return NOLIMIT
